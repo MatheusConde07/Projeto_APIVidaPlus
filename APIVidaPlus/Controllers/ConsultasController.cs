@@ -43,4 +43,19 @@ public class ConsultasController : ControllerBase
         // Retorna 204 (No Content) que é padrão para Updates com sucesso
         return NoContent();
     }
+
+    // DELETE: api/consultas/{id}
+    // Exclui fisicamente o registro.
+    [HttpDelete("{id}")]
+    public IActionResult DeletarConsulta(int id)
+    {
+        var consultaAlvo = _consultas.FirstOrDefault(c => c.Id == id);
+
+        if (consultaAlvo == null)
+            return NotFound(new { mensagem = "Consulta não encontrada." });
+
+        _consultas.Remove(consultaAlvo);
+
+        return NoContent(); // Retorna 204 (Sucesso sem conteúdo)
+    }
 }

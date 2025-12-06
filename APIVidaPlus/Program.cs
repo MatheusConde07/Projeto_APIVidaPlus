@@ -56,7 +56,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthentication(); // <--- IMPORTANTE
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
