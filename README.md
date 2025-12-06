@@ -38,6 +38,7 @@ Após gerar o token, clique no botão **Authorize** (cadeado) no Swagger e insir
 - `GET /api/consultas`: Listar consultas (Requer Token).
 - `POST /api/consultas`: Agendar nova consulta (Requer Token).
 - `PUT api/consultas/{id}`: Alterar consulta existente (Requer Token).
+- `DELETE api/consultas/{id}`: Deletar consulta existente (Requer Token).
 
 ---
 **Aluno:** [MATHEUS CONDE]
