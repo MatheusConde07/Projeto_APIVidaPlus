@@ -1,6 +1,6 @@
 # SGHSS - Sistema de Gestão Hospitalar VidaPlus
 
-Projeto Multidisciplinar desenvolvido como requisito parcial para aprovação na disciplina de Projetos de TI.
+Projeto Multidisciplinar desenvolvido como requisito para aprovação em Análise e Desenvolvimento de Sistemas.
 Este repositório contém o Back-end (API) do sistema de gestão hospitalar.
 
 ## 🚀 Tecnologias Utilizadas
