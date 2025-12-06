@@ -23,4 +23,24 @@ public class ConsultasController : ControllerBase
     {
         return Ok(_consultas);
     }
+
+    // PUT: api/consultas/{id}
+    // Serve para atualizar (exemplo: mudar data)
+    [HttpPut("{id}")]
+    public IActionResult AtualizarConsulta(int id, [FromBody] Consulta consultaEditada)
+    {
+        // Busca na memória
+        var consultaAlvo = _consultas.FirstOrDefault(c => c.Id == id);
+
+        if (consultaAlvo == null)
+            return NotFound(new { mensagem = "Consulta não encontrada." });
+
+        // Atualiza os dados
+        consultaAlvo.Status = consultaEditada.Status;
+        consultaAlvo.DataHora = consultaEditada.DataHora;
+        consultaAlvo.MedicoId = consultaEditada.MedicoId;
+
+        // Retorna 204 (No Content) que é padrão para Updates com sucesso
+        return NoContent();
+    }
 }
